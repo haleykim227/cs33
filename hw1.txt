@@ -1,0 +1,20 @@
+2.71)
+	A) Because the program cannot handle negative numbers
+	B) int xbyte(packed_t word, int bytenum)
+	  {
+           int newbyte = word << ((3 - bytenum) << 3);
+           return newbyte >> 24;
+	  }
+2.82)
+	A) False. int_min < 1 != -int_min > -1
+	B) True. ((x + y) << 4) + y - x = ((x + y) * 0b10000) + y - x
+	   = (x + y) * 16) + y - x = 16x + 16y + y - x
+	   = 17y + 15x
+	C) False. ~(1100)+~(1100)+1 = (0011)+(0011)+1 = 0111
+	   	  ~(1100+1100) = ~(11100) = 00011
+		  00011 != 0111
+	D) True. The cast from signed to unsigned does not mess with the bit 
+	   representation. 
+	E) True.
+	   (1011) >> 2 == 1110, (1110) << 2 == 1000, 1000 <= 1110
+	   (0101) >> 2 == 0001, (0001) << 2 == 0100, 0100 <= 1110
